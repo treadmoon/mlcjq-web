@@ -1,0 +1,36 @@
+.dnd-box {
+  min-height: 600px;
+  display: flex;
+  .left {
+    flex: 1;
+    min-height: 600px;
+  }
+  .right {
+    flex: 1;
+    > div {
+      min-height: 600px;
+    }
+  }
+
+  .pitem {
+    width: 250px;
+    height: 80px;
+    background: #fff;
+    color: #212121;
+    text-align: center;
+    line-height: 80px;
+  }
+}
+
+.drag-item {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  // margin: 0 !important;
+
+  .drag-area {
+    height: 50px;
+  }
+  .info-area {
+  }
+}
