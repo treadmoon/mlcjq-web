@@ -1,0 +1,89 @@
+.personnel-tab-container {
+  width: 100%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 10px;
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .link-more {
+      font-size: 14px;
+      color: #1890ff;
+      cursor: pointer;
+    }
+
+    .link-more:hover {
+      text-decoration: underline;
+    }
+  }
+  .personal-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    height: 140px;
+    overflow: hidden;
+    .personal-card {
+      width: 120px;
+    }
+
+    .personal-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2px;
+      margin: 2px 0;
+      .personal-card-header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        .personal-card-hover {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: rgba(0, 0, 0, 0.2);
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover .personal-card-hover {
+          display: flex;
+        }
+      }
+
+      .personal-card-body {
+        width: 100%;
+        text-align: center;
+
+        .personal-card-entryTime {
+          font-size: 12px;
+          color: #999999;
+          margin-bottom: 5px;
+        }
+
+        .personal-card-name {
+          font-size: 16px;
+          font-weight: bold;
+          color: #333333;
+        }
+      }
+    }
+  }
+}

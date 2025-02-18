@@ -1,0 +1,246 @@
+.search-wrapper {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 2px 16px 0px rgba(154, 171, 187, 0.24);
+  border: 2px solid transparent;
+  border-radius: 8px;
+
+  &.focus {
+    border: 2px solid #2124db;
+  }
+
+  .search-box {
+    position: relative;
+    width: 400px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    .inp-wrapper {
+      flex: 1;
+    }
+    .outer {
+      width: 100%;
+    }
+    .inner {
+      width: 100%;
+      max-width: 1200px;
+      padding: 0;
+      background: none;
+    }
+    .search-icon {
+      display: flex;
+      flex-shrink: 0;
+      width: 44px;
+      height: 36px;
+      background: #5582f3;
+      border-radius: 4px;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .tips-wrapper {
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.12);
+      background-color: #fff;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 12px 0;
+      box-sizing: border-box;
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        .title {
+          color: #999;
+        }
+        .clear {
+          color: #333;
+          cursor: pointer;
+        }
+      }
+      .info {
+        .list {
+          list-style: none;
+          max-height: 152px;
+          overflow: overlay;
+          padding: 0;
+          .item {
+            display: flex;
+            cursor: pointer;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            justify-content: space-between;
+            .txt {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-right: 20px;
+              flex: 1;
+            }
+            .icon {
+              flex-shrink: 0;
+              width: 20px;
+              .kdicon {
+                display: none;
+                color: #999;
+                &:hover {
+                  color: #2124db;
+                }
+              }
+            }
+            &:hover {
+              background-color: #f3f6ff;
+              .icon {
+                .kdicon {
+                  display: block;
+                }
+              }
+            }
+            &.asso:hover {
+              background-color: #f3f6ff;
+              color: #f00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 消息待办
+.messagePending-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+// 消息待办 列表
+.messagePending-container .mode-list {
+  .nav {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      font-size: 16px;
+      color: #212121;
+    }
+    .more {
+      font-size: 14px;
+      color: #5582f3;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+  .main {
+    margin-top: 10px;
+    .main-list {
+      width: 100%;
+      .list-box {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        .list-item {
+          display: flex;
+          align-items: center;
+          margin-top: 12px;
+          .info {
+            flex: 1;
+          }
+          .name {
+            flex-shrink: 0;
+            width: 80px;
+          }
+          .date {
+            flex-shrink: 0;
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+// 消息待办 卡片
+.messagePending-container .mode-card {
+  .nav {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    .title {
+      font-size: 16px;
+      color: #212121;
+    }
+    .nav-icon {
+      font-size: 12px;
+      font-weight: 400;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-top: 5px;
+    }
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .messageCard {
+      width: 100px;
+      height: 50px;
+      border-radius: 4px;
+      display: flex;
+      padding: 8px 10px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      .left {
+        flex: 1;
+        .title {
+          font-size: 12px;
+        }
+        .number {
+          margin-top: 6px;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20px;
+      }
+    }
+  }
+}
+
+
+.multiLangSetting-container{
+  position: relative;
+  width: 280px;
+  .popperOuter{
+    width: 100%;
+    transform: unset !important;
+    top: 100% !important;
+    margin-top: 4px !important;
+    left: 0 !important;
+  }
+
+  .tips-inp{
+    .form-item{
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      .label{
+        width: 56px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

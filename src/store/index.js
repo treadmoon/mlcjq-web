@@ -4,11 +4,11 @@ import userReducer from "@/pages/Users/usersSlice";
 import { apiSlice } from "../features/api/apiSlice";
 
 // 错误中间件
-export const rtkQueryErrorLogger = (api) => (next) => (action) => {
-  console.log(action, "中间件", api);
+export const rtkQueryErrorLogger = api => next => action => {
+  // console.log(action, "中间件", api);
   // 只能拦截不是200的时候
   if (isRejectedWithValue(action)) {
-    console.log(action, "中间件,错误信息");
+    // console.log(action, "中间件,错误信息");
     // console.log(action.error.data.message, "错误信息");
     // console.warn(action.payload.status, "当前的状态");
     // console.warn(action.payload.data?.message, "错误信息");
@@ -24,7 +24,7 @@ export default configureStore({
     // posts: postsReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware()
       .concat(apiSlice.middleware)
       .concat(rtkQueryErrorLogger),

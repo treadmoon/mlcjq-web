@@ -95,8 +95,8 @@ function BeforeProvider({ children }) {
   const location = useLocation();
   const navigator = useNavigate();
   useEffect(() => {
-    console.log("change location.pathname");
-    console.log({ location, navigator });
+    // console.log("change location.pathname");
+    // console.log({ location, navigator });
   }, [location.pathname]);
   return children;
 }

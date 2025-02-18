@@ -110,6 +110,7 @@ function DnD(props) {
                               {item.content}
                             </div>
                             <div className="info-area">
+                              <div className="tag">HIGHT</div>
                               其他信息
                               <br />
                               其他信息

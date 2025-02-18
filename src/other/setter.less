@@ -1,0 +1,90 @@
+.editListSetter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: 100%;
+
+  .layout {
+    background-color: #f9f9f9;
+    padding: 10px;
+    position: relative;
+  }
+
+  .item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: move;
+    line-height: 30px;
+
+    &:hover {
+      background-color: #ccc;
+    }
+    .delete-icon {
+      cursor: pointer;
+      color: var(--theme-color, #0e5fd8);
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+.editSortListSetter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  height: 100%;
+
+  .nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    .nav-item {
+      cursor: pointer;
+      padding: 4px 8px;
+
+      &.active {
+        color: #0e5fd8;
+        border-bottom: 2px solid #0e5fd8;
+      }
+
+      &:hover {
+        color: #0e5fd8;
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #ccc;
+      }
+      .kdicon {
+        cursor: pointer;
+        color: var(--theme-color, #0e5fd8);
+      }
+    }
+  }
+}
+
+.mygridlayout-container {
+  .layout {
+    position: relative;
+    .item {
+      background-color: #f9f9f9;
+    }
+  }
+}

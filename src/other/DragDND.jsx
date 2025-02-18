@@ -15,7 +15,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   ...draggableStyle,
 });
 
-const getListStyle = (isDraggingOver) => ({
+const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? "lightblue" : "lightgrey",
   display: "flex",
   padding: grid,
@@ -62,7 +62,7 @@ function DragDND(props) {
   const [list1, setList1] = useState(l1);
   const [list2, setList2] = useState(l2);
 
-  const getList = (id) => {
+  const getList = id => {
     if (id === "droppable-1") {
       return list1;
     }

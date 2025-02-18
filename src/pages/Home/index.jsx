@@ -23,6 +23,20 @@ import ClickHoc from "../../other/ClickHoc";
 import TestUseForm from "../../other/TestUseForm";
 import DnD from "../../other/dnd";
 
+import MarkdownPreview from "../../other/markDown";
+
+import Uoload from "../../other/uoload";
+
+import PersonnelTab from "../../other/PersonnelTab";
+
+import MyApplication from "../../other/myApplication";
+
+import Setter from "../../other/Setter";
+
+import Anchor from "../../other/AnchorPage";
+
+import Material from "../../other/material";
+
 import "./index.less";
 
 function Home() {
@@ -31,7 +45,17 @@ function Home() {
 
   return (
     <div className="home-container">
-      <DnD />
+      {/* <MyApplication /> */}
+      <Setter />
+      <Material />
+      {/* <PersonnelTab /> */}
+      {/* <Anchor /> */}
+
+      {/* <MarkdownPreview /> */}
+
+      {/* <Uoload /> */}
+
+      {/* <DnD /> */}
 
       {/* <TestUseForm /> */}
 
