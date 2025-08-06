@@ -1,0 +1,92 @@
+
+.analysis-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+
+  .title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+
+  .filter {
+    .period-select {
+      padding: 8px 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 14px;
+      cursor: pointer;
+      
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0,123,255,.25);
+      }
+    }
+  }
+}
+
+.data-table {
+  position: relative;
+  border-collapse: collapse;
+  
+  .table-header {
+    display: flex;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+    
+    .empty-cell {
+      width: 60px;
+      min-width: 60px;
+    }
+    
+    .header-cell {
+      flex: 1;
+      text-align: center;
+      font-weight: 500;
+      color: var(--text-color);
+      border-left: 1px solid #eee;
+      
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  .table-row {
+    display: flex;
+    
+    .row-header {
+      width: 60px;
+      min-width: 60px;
+      padding: 12px;
+      background-color: white;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      font-weight: 500;
+    }
+    
+    .data-cell {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      border-left: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.3s ease;
+      
+      &:last-child {
+        border-right: 1px solid #eee;
+      }
+    }
+  }
+}

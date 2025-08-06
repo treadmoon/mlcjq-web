@@ -1,0 +1,99 @@
+{
+    "type": "robot",
+    "msg": [
+      {
+        "type": "text",
+        "content": "已生成【AI产品经理】职位画像，可用于自动筛选候选人匹配度、优化招聘渠道投放策略，您可随时补充条件："
+      },
+      {
+        "type": "job-profile",
+        "content": {
+          "jobDescription": {
+            "subTitle": "AI产品经理",
+            "jobTags": [
+              { "label": "职位层级：资深专家/中层管理" },
+              { "label": "汇报对象：产品总监/CTO" },
+              { "label": "工作地点：北京/上海/深圳（根据需求补充）" },
+              { "label": "工作性质：全职" }
+            ],
+            "jobInfos": "负责AI产品全生命周期管理，主导机器学习/NLP/CV等领域的商业化产品设计，协调技术研发与市场需求的精准匹配，推动AI解决方案在垂直领域的落地应用。"
+          },
+          "KSAEInfos": {
+            "subTitle": "KSAE纬度分析",
+            "kseaMap": [
+              {
+                "id": "K1",
+                "name": "知识深度",
+                "value": "7.8",
+                "type": "knowledge",
+                "reasonsForEvaluation": "需深度掌握AI技术原理与产品管理双维度知识体系，评分达到Expert层级"
+              },
+              {
+                "id": "K2",
+                "name": "知识广度",
+                "value": "6.2",
+                "type": "knowledge",
+                "reasonsForEvaluation": "要求技术-商业复合型知识结构但非研究级广度"
+              },
+              {
+                "id": "K3",
+                "name": "学习能力",
+                "value": "8.5",
+                "type": "knowledge",
+                "reasonsForEvaluation": "AI领域技术迭代速度要求顶尖学习适应力"
+              },
+              {
+                "id": "S1",
+                "name": "AI产品设计",
+                "value": "8.0",
+                "type": "skill",
+                "reasonsForEvaluation": "需求转化与原型开发的双重专家要求"
+              },
+              {
+                "id": "S2",
+                "name": "技术沟通",
+                "value": "7.0",
+                "type": "skill",
+                "reasonsForEvaluation": "需在技术细节与商业表达间取得平衡"
+              },
+              {
+                "id": "A1",
+                "name": "技术商业化能力",
+                "value": "8.2",
+                "type": "ability",
+                "reasonsForEvaluation": "核心价值在于打通技术与市场的鸿沟"
+              },
+              {
+                "id": "E1",
+                "name": "行业深度",
+                "value": "8.0",
+                "type": "experience",
+                "reasonsForEvaluation": "垂直领域经验积累是竞争壁垒"
+              }
+            ]
+          },
+          "jobDevPath": [
+            {
+              "headTitle": "纵向晋升",
+              "type": "promotion",
+              "linkTags": [
+                { "title": "AI产品经理" },
+                { "title": "AI产品总监" },
+                { "title": "AI业务线负责人" },
+                { "title": "首席AI官" }
+              ]
+            },
+            {
+              "headTitle": "横向发展",
+              "type": "develop",
+              "linkTags": [
+                { "title": "AI解决方案架构师" },
+                { "title": "AI生态合作经理" },
+                { "title": "AI投资分析师" }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }

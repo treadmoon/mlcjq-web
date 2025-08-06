@@ -15,11 +15,11 @@ const queryClient = new QueryClient();
 export default function AppProviders() {
   return (
     <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
+      {/* <QueryClientProvider client={queryClient}> */}
         <Suspense fallback={<div>loading...</div>}>
           <RouterProvider router={router} />
         </Suspense>
-      </QueryClientProvider>
+      {/* </QueryClientProvider> */}
     </Provider>
   );
 }

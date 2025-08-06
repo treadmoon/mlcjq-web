@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect,useRef } from "react";
 import { ThemeContext } from "../../App";
 // import Son from "../../other/son";
 // import LifeCycle from "../../other/lifeCycle";
@@ -37,17 +37,49 @@ import Anchor from "../../other/AnchorPage";
 
 import Material from "../../other/material";
 
+import SetterGroup from "../../other/setterGroup";
+
+import IBanner from "../../other/IBanner";
+
+import ModalDate from "../../other/ModalDate";
+
+import TestPromise from "../../other/TestPromise";
+
+import ZustandPage from "../../other/zustand";
+
+import {jsBaseMain} from "../../other/jsBase/index" 
+
+import OtherIndex from "../../other/OtherIndex";
+
 import "./index.less";
 
 function Home() {
   // const theme = useContext(ThemeContext);
   // const sonRef = useRef();
 
+  useEffect(()=>{
+    jsBaseMain()
+  },[])
+
+
   return (
     <div className="home-container">
+      <OtherIndex />
+      {/* <ZustandPage /> */}
       {/* <MyApplication /> */}
-      <Setter />
-      <Material />
+      {/* <Setter /> */}
+      {/* <Material />
+      <SetterGroup /> */}
+      <div>
+        {/* <IBanner /> */}
+      </div>
+      <div>
+        {/* <ModalDate /> */}
+      </div>
+      <div>
+        {/* <TestPromise /> */}
+        {/* <TestPromise tk="222" /> */}
+      </div>
       {/* <PersonnelTab /> */}
       {/* <Anchor /> */}
 

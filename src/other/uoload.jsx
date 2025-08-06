@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Upload,
   Input,
@@ -12,17 +12,23 @@ import {
 import "./uoload.less";
 import "@kdcloudjs/kdesign/dist/kdesign.css";
 
-const formatDate = (date, format = 'YYYY/MM/DD') => {
-  if (!date) return '';
+const formatDate = (date, format = "YYYY-MM-DD HH:mm:ss") => {
+  if (!date) return "";
   const d = new Date(date);
   const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, '0');
-  const day = String(d.getDate()).padStart(2, '0');
-  
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  const hours = String(d.getHours()).padStart(2, "0");
+  const minutes = String(d.getMinutes()).padStart(2, "0"); 
+  const seconds = String(d.getSeconds()).padStart(2, "0");
+
   return format
-    .replace('YYYY', year)
-    .replace('MM', month)
-    .replace('DD', day);
+    .replace("YYYY", year)
+    .replace("MM", month)
+    .replace("DD", day)
+    .replace("HH", hours)
+    .replace("mm", minutes)
+    .replace("ss", seconds);
 };
 
 function uoload() {
@@ -77,23 +83,27 @@ function uoload() {
       publicTimeRange: [new Date("2024/12/03"), new Date("2025/01/10")],
     },
   ];
-  const [fileList, setFileList] = React.useState(initFiles);
+  const [fileList, setFileList] = useState(initFiles);
+
+  const [currPublicTime, setCurrPublicTime] = useState(2);
 
   const handleChange = ({ fileList }) => setFileList(fileList);
 
   const [form] = Form.useForm();
 
-  const editImgConfig = file => {
+  const editImgConfig = (file, currPublicTime) => {
     const { linkSrc = "", publicTime = "", publicTimeRange = [] } = file ?? {};
 
     form.setFieldsValue({ linkSrc, publicTime, publicTimeRange });
 
     const onValuesChangeHandle = e => {
-      // console.log(e);
-      // console.log(form.getFieldsValue().publicTimeRange[0].toLocaleDateString());
+      console.log(form.getFieldValue("publicTime"));
+      setCurrPublicTime(form.getFieldValue("publicTime"));
     };
 
     const inpStyle = { width: 230 };
+
+    console.log("currPublicTime==>", currPublicTime);
 
     const body = (
       <Form
@@ -117,7 +127,12 @@ function uoload() {
             <Radio value={2}>定时发布</Radio>
           </Radio.Group>
         </Form.Item>
-        <Form.Item label="发布时段" name="publicTimeRange" required>
+        <Form.Item
+          label="发布时段"
+          name="publicTimeRange"
+          required
+          hidden={currPublicTime == 1}
+        >
           <RangePicker
             borderType="border"
             format={"YYYY/MM/DD"}
@@ -128,9 +143,7 @@ function uoload() {
     );
 
     const onCancel = () => {
-      console.log("关闭");
       const fieldsValue = form.getFieldsValue();
-      console.log("fieldsValue", fieldsValue);
 
       setFileList(pre => {
         return pre.map(fileItem => {
@@ -139,7 +152,7 @@ function uoload() {
             fileItem.publicTime = fieldsValue.publicTime;
             fileItem.publicTimeRange = [
               formatDate(fieldsValue?.publicTimeRange?.[0]),
-              formatDate(fieldsValue?.publicTimeRange?.[1])
+              formatDate(fieldsValue?.publicTimeRange?.[1]),
             ];
 
             fileItem.status = "done";
@@ -187,7 +200,7 @@ function uoload() {
             <Icon
               type="edit-border"
               className="img-icon"
-              onClick={() => editImgConfig(file)}
+              onClick={() => editImgConfig(file, currPublicTime)}
             />
           )}
           <Icon type="delete" className="img-icon" />
@@ -197,6 +210,7 @@ function uoload() {
   };
   return (
     <>
+      {currPublicTime}
       <Upload
         action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
         listType="picture"

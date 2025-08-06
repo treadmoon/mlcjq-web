@@ -1,0 +1,198 @@
+{
+  "type": "robot",
+  "msg": [
+    {
+      "type": "text",
+      "content": "已生成【AI产品经理】职位画像，可用于自动筛选候选人匹配度、优化招聘渠道投放策略，您可随时补充条件："
+    },
+    {
+      "type": "job-profile",
+      "content": {
+        "jobDescription": {
+          "subTitle": "AI产品经理",
+          "jobTags": [
+            { "label": "所属部门：产品部" },
+            { "label": "汇报对象：技术VP" },
+            { "label": "职位层级：资深专家" },
+            { "label": "工作性质：全职" }
+          ],
+          "jobInfos": "职责目标：负责AI相关产品的规划、设计及落地，协调技术团队实现产品目标，推动AI技术商业化应用。"
+        },
+        "KSAEInfos": {
+          "subTitle": "KSAE纬度分析",
+          "kseaMap": [
+            {
+              "id": "1001",
+              "name": "分布式设计",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "capacity",
+              "typeName": "能力"
+            },
+            {
+              "id": "1002", 
+              "name": "系统架构",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "capacity",
+              "typeName": "能力"
+            },
+            {
+              "id": "1003",
+              "name": "代码重构", 
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "capacity",
+              "typeName": "能力"
+            },
+            {
+              "id": "1004",
+              "name": "性能优化",
+              "value": "Math.floor(Math.random() * 10) + 1", 
+              "type": "capacity",
+              "typeName": "能力"
+            },
+            {
+              "id": "1005",
+              "name": "安全防护",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "capacity", 
+              "typeName": "能力"
+            },
+            {
+              "id": "2001",
+              "name": "项目管理",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "knowledge",
+              "typeName": "管理"
+            },
+            {
+              "id": "2002",
+              "name": "团队协作",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "knowledge",
+              "typeName": "管理"
+            },
+            {
+              "id": "2003",
+              "name": "需求分析",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "knowledge",
+              "typeName": "管理"
+            },
+            {
+              "id": "2004",
+              "name": "风险控制",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "knowledge",
+              "typeName": "管理"
+            },
+            {
+              "id": "2005",
+              "name": "资源调配",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "knowledge",
+              "typeName": "管理"
+            },
+            {
+              "id": "3001",
+              "name": "产品设计",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "experience",
+              "typeName": "产品"
+            },
+            {
+              "id": "3002",
+              "name": "用户体验",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "experience",
+              "typeName": "产品"
+            },
+            {
+              "id": "3003",
+              "name": "市场分析",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "experience",
+              "typeName": "产品"
+            },
+            {
+              "id": "3004",
+              "name": "竞品研究",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "experience",
+              "typeName": "产品",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "3005",
+              "name": "产品规划",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "experience",
+              "typeName": "产品",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "4001",
+              "name": "沟通能力",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "skill",
+              "typeName": "软技能",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "4002",
+              "name": "学习能力",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "skill",
+              "typeName": "软技能",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "4003",
+              "name": "抗压能力",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "skill",
+              "typeName": "软技能",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "4004",
+              "name": "创新思维",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "skill",
+              "typeName": "软技能",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            },
+            {
+              "id": "4005",
+              "name": "执行力",
+              "value": "Math.floor(Math.random() * 10) + 1",
+              "type": "skill",
+              "typeName": "软技能",
+              "reasonsForEvaluation": "需在2周内快速掌握AIGC等新工具应用，定期输出行业洞察报告。是的，这就是依据"
+            }
+          ]
+        },
+        "jobDevPath": [
+          {
+            "headTitle": "岗位发展路径",
+            "type": "promotion",
+            "linkTags": [
+              { "title": "AI产品经理" },
+              { "title": "AI产品经理" },
+              { "title": "CTO" }
+            ]
+          },
+          {
+            "headTitle": "横向发展",
+            "type": "develop",
+            "linkTags": {
+              "title": "AI产品经理",
+              "children": [
+                { "title": "技术管理" },
+                { "title": "商业产品经理" }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

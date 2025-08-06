@@ -1,0 +1,60 @@
+// styles.less
+.performance-analysis {
+    padding: 20px;
+  
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  
+      h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 500;
+      }
+  
+      .cycle-select {
+        display: flex;
+        align-items: center;
+  
+        label {
+          margin-right: 10px;
+        }
+  
+        select {
+          padding: 5px 10px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+        }
+      }
+    }
+  
+    .analysis-table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        border: 1px solid #eee;
+        padding: 12px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #f5f5f5;
+        font-weight: 400;
+      }
+  
+      .level-e { background-color: #ffd6e5; }
+      .level-d { background-color: #ffdfb6; }
+      .level-c { background-color: #b3e5fc; }
+      .level-b { background-color: #c8e6c9; }
+      .level-a { background-color: #e8eaf6; }
+  
+      .level-cell {
+        &:empty {
+          visibility: hidden;
+        }
+      }
+    }
+  }

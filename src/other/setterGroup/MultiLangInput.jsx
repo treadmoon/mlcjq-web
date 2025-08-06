@@ -2,7 +2,6 @@ import React, { useState, useRef, useMemo } from "react";
 
 import { Select, Input, Divider, Icon, Tooltip } from "@kdcloudjs/kdesign";
 
-import useClickAway from "../../hooks/useClickAway";
 
 function MultiLangSetting() {
   const [inpVal_zh, setInpVal_zh] = useState("图形");

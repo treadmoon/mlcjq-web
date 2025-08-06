@@ -1,0 +1,66 @@
+.user-info {
+  display: flex;
+  align-items: flex-start;
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    .top-line {
+      display: flex;
+      align-items: start;
+
+      .name {
+        font-size: 18px;
+        margin-right: 10px;
+        font-weight: 600;
+      }
+
+      .number {
+        font-size: 16px;
+        margin-right: 20px;
+      }
+
+      .phone {
+        font-size: 16px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .bottom-line {
+      margin-top: 6px;
+      font-size: 16px;
+      span {
+        margin-right: 20px;
+      }
+      .age {
+        margin-right: 0;
+      }
+    }
+
+    .email {
+      margin-top: 4px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .toggle-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: 5px;
+      font-size: 16px;
+    }
+  }
+}

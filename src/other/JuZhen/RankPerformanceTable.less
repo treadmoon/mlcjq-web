@@ -1,0 +1,72 @@
+// RankPerformanceTable.less
+@blue-bg: #e6f7ff;
+@blue-dark: #40a9ff;
+
+.performance-table {
+  width: 800px;
+  margin: 20px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 20px;
+
+  .header {
+    margin-bottom: 20px;
+    
+    h2 {
+      color: rgba(0, 0, 0, 0.85);
+      margin: 0 0 8px 0;
+      font-size: 16px;
+    }
+    
+    .cycle-type {
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 12px;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #f0f0f0;
+    }
+
+    thead {
+      tr:first-child {
+        th {
+          border-top: none;
+        }
+      }
+      
+      th {
+        background: #fafafa;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.85);
+      }
+    }
+
+    .rank-level {
+      background: #fafafa;
+      font-weight: 500;
+    }
+
+    .level-C {
+      background: @blue-bg;
+    }
+    
+    .level-B {
+      background: @blue-dark;
+      color: white;
+    }
+    
+    // 其他等级的默认样式
+    .level-E, .level-D, .level-A {
+      background: #fff;
+    }
+  }
+}

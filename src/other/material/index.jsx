@@ -6,9 +6,9 @@ import SearchHome from "./SearchHome";
 
 import MessagePending from "./MessagePending";
 
-import MultiLangSetting from "./MultiLangInput";
-
 import MatrixChart from "./MatrixChart";
+
+import UseArraySetter from "./UseArraySetter";
 
 import "./index.less";
 
@@ -17,10 +17,11 @@ function Material() {
     <>
       <h4>物料</h4>
       <div>
-        {/* <SearchHome />
-        <MessagePending /> */}
+        {/* <SearchHome /> */}
+        {/* <MessagePending />
         <MultiLangSetting />
-        <MatrixChart />
+        <MatrixChart /> */}
+        <UseArraySetter />
       </div>
     </>
   );

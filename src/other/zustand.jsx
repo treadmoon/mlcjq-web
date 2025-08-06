@@ -1,9 +1,6 @@
 import React from "react";
-import { shallow } from "zustand/shallow";
 
-import { useBearStore } from "./store";
-
-let rerenderCount = 0;
+import { useChart } from "../store/tZustand";
 
 function ZustandPage(props) {
   return (
@@ -14,15 +11,24 @@ function ZustandPage(props) {
 }
 
 function Tutorial() {
+  const { name="", upName =""} = useChart(e=>e);
+  // const { name="", upName=()=>{} } = useChart(({ name, upName }) => ({
+  //   name,
+  //   upName,
+  // }));
+
   return (
     <div>
-      <h4>Tutorial</h4>
+      <h4>Tutorial：{name}</h4>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => {
+          upName(e.target.value);
+        }}
+      />
     </div>
   );
-}
-
-function Demo() {
-  return <div></div>;
 }
 
 export default ZustandPage;

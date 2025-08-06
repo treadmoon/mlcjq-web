@@ -9,20 +9,24 @@ function SearchHome() {
 
   const options = [
     {
-      children: "苹果苹果",
+      children: "全文检索",
       value: "apple",
+      key:"15"
     },
     {
-      children: "橘子橘子",
+      children: "个人信息",
       value: "orange",
+      key:"14"
     },
     {
-      children: "葡萄葡萄",
+      children: "工作经历",
       value: "grape",
+      key:"13"
     },
     {
-      children: "葡萄柚子",
+      children: "学习培训",
       value: "grapefruit",
+      key:"12"
     },
   ];
 
@@ -162,7 +166,16 @@ function SearchHome() {
             optionFilterProp="children"
             borderType="none"
             suffixIcon={<Icon type="arrow-down-solid" />}
-            onChange={val => setType(val)}
+            onChange={(...params) => {
+              console.log("选择",params);
+              
+              // setType(val)
+            }}
+            onSelect={(...params) => {
+              console.log("选择onSelect",params);
+              
+              // setType(val)
+            }}
             style={{
               width: 110,
               padding: "0 0 0 20px",
@@ -170,7 +183,7 @@ function SearchHome() {
           >
             {options.map(item => {
               return (
-                <Option value={item.value} key={item.value}>
+                <Option value={item.value} key={item.value} item={item}>
                   {item.children}
                 </Option>
               );
